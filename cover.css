@@ -81,7 +81,7 @@ body {
   border-bottom-color: #fff;
 }
 /*edit 48em to */
-@media (min-width: 100em) {
+@media (min-width: 48em) {
   .masthead-brand {
     float: left;
   }
