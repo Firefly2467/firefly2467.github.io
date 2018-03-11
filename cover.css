@@ -83,6 +83,7 @@ body {
 /*edit 48em to */
 @media (min-width: 48em) {
   .masthead-brand {
+      padding: .25rem 0; /**/
     float: left;
   }
   .nav-masthead {
