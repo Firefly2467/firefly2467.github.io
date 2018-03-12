@@ -16,7 +16,7 @@ a:hover {
   color: #333;
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #259ebb;
-  border: .05rem solid #fff;
+  border: .05rem solid  #333;
 }
 
 
