@@ -10,6 +10,9 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
     });
 
     $(document).ready(function() {
+        //fix direct nav 
+        var url = document.domain;
+        console.log(url);
 
         /* ---------------------------------------------- /*
          * WOW Animation When You Scroll
