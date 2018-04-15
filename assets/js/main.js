@@ -7,20 +7,12 @@
     $(window).on('load', function() {
         $('.loader').fadeOut();
         $('.page-loader').delay(350).fadeOut('slow');
-        //fix direct nav
-        var url = window.location.href;
-        console.log(url);
-        var start = url.indexOf('%');
-        var tagIDz = url.slice(start-1);
-        var tagID = '#' + tagIDz;
-        console.log(tagID + ' 6');
-        $('html, body').stop().animate({
-            scrollTop: $(tagID).offset().top - 50
-        }, 1000);
     });
 
     $(document).ready(function() {
 
+        //fix direct nav
+        window.top.location.reload(false);
         /* ---------------------------------------------- /*
          * WOW Animation When You Scroll
          /* ---------------------------------------------- */
