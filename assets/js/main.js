@@ -15,10 +15,10 @@
         console.log(url);
         var start = url.indexOf('#');
         var tagID = url.slice(start);
-        console.log(tagID + ' 2');
+        console.log(tagID + ' 3');
             
         $('html, body').animate({
-        scrollTop: $('#projects').offset().top
+        scrollTop: $('#projects').position().top
         }, 1000);
         
         
