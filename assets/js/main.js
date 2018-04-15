@@ -15,15 +15,13 @@
         console.log(url);
         var start = url.indexOf('#');
         var tagID = url.slice(start);
-        console.log(tagID + ' 5');
-        setTimeout(run(), 4000);
-        function run() {
+        console.log(tagID + ' 6');
             
         $('html, body').animate({
-          scrollTop: ($(tagID).offset().top)
-        }, 1000);
+          scrollTop: $(tagID).offset().top
+        });
         
-        }
+        
         /*
         $('.section-scroll').bind('click', function(e) {
             var anchor = $(this);
