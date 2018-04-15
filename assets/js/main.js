@@ -15,12 +15,12 @@
         console.log(url);
         var start = url.indexOf('#');
         var tagID = url.slice(start);
-        console.log(tagID + ' 4');
-            
+        console.log(tagID + ' 5');
+         /*   
         $('html, body').animate({
         scrollTop: ( $('#projects').position().top - 50)
         }, 1000);
-        
+        */
         
         /*
         $('.section-scroll').bind('click', function(e) {
