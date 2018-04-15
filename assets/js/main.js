@@ -15,11 +15,8 @@
         console.log(url);
         var start = url.indexOf('#');
         var tagID = url.slice(start);
-        console.log(tagID + ' 1');
+        console.log(tagID + ' 2');
             
-        $(window).animate({
-          scrollTop: $(tagID).offset().top
-        });
         $('html, body').animate({
         scrollTop: $('#projects').offset().top
         }, 1000);
