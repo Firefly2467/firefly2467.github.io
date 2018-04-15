@@ -10,9 +10,6 @@
     });
 
     $(document).ready(function() {
-
-        //fix direct nav
-        
         /* ---------------------------------------------- /*
          * WOW Animation When You Scroll
          /* ---------------------------------------------- */

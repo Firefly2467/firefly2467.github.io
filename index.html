@@ -350,5 +350,14 @@
     <script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
+    
+    <script>
+		window.onload = function() {if(location.hash){
+			var elId = location.hash.replace('#','');
+			var scrollToEl = document.getElementById(elId);
+			scrollToEl.scrollIntoView(true);   
+			}
+		}
+</script>
   </body>
 </html>
