@@ -14,7 +14,7 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
         var url = window.location.href;
         console.log(url);
         var start = '#';
-        var tagID = url.slice(start);
+        var tagID = url.slice(start, -1);
         console.log(tagID);
         
         /*
