@@ -7,31 +7,18 @@
     $(window).on('load', function() {
         $('.loader').fadeOut();
         $('.page-loader').delay(350).fadeOut('slow');
-    });
-
-    $(document).ready(function() {
-        //fix direct nav 
+        //fix direct nav
         var url = window.location.href;
         console.log(url);
         var start = url.indexOf('#');
         var tagID = url.slice(start);
         console.log(tagID + ' 5');
-         /*   
-        $('html, body').animate({
-        scrollTop: ( $('#projects').position().top - 50)
+        $('html, body').stop().animate({
+            scrollTop: $(tagID).offset().top - 50
         }, 1000);
-        */
-        
-        /*
-        $('.section-scroll').bind('click', function(e) {
-            var anchor = $(this);
-            $('html, body').stop().animate({
-                scrollTop: $(anchor.attr('href')).offset().top - 50
-            }, 1000);
-            e.preventDefault();
-        });
-        
-        */
+    });
+
+    $(document).ready(function() {
 
         /* ---------------------------------------------- /*
          * WOW Animation When You Scroll
