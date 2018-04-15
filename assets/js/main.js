@@ -12,7 +12,7 @@
     $(document).ready(function() {
 
         //fix direct nav
-        window.top.location.reload(false);
+        
         /* ---------------------------------------------- /*
          * WOW Animation When You Scroll
          /* ---------------------------------------------- */
