@@ -14,7 +14,7 @@
         var url = window.location.href;
         console.log(url);
         var start = url.indexOf('#');
-        var tagID = url.slice(start, -1);
+        var tagID = url.slice(start);
         console.log(tagID);
         
         /*
