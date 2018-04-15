@@ -10,9 +10,10 @@
         //fix direct nav
         var url = window.location.href;
         console.log(url);
-        var start = url.indexOf('#');
-        var tagID = url.slice(start);
-        console.log(tagID + ' 5');
+        var start = url.indexOf('%');
+        var tagIDz = url.slice(start-1);
+        var tagID = '#' + tagIDz;
+        console.log(tagID + ' 6');
         $('html, body').stop().animate({
             scrollTop: $(tagID).offset().top - 50
         }, 1000);
