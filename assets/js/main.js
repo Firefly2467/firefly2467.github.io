@@ -11,8 +11,22 @@ console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55')
 
     $(document).ready(function() {
         //fix direct nav 
-        var url = document.domain;
+        var url = window.location.href;
         console.log(url);
+        var start = '#';
+        var tagID = url.slice(start);
+        console.log(tagID);
+        
+        /*
+        $('.section-scroll').bind('click', function(e) {
+            var anchor = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $(anchor.attr('href')).offset().top - 50
+            }, 1000);
+            e.preventDefault();
+        });
+        
+        */
 
         /* ---------------------------------------------- /*
          * WOW Animation When You Scroll
