@@ -17,7 +17,7 @@
         var tagID = url.slice(start);
         console.log(tagID + ' 5');
         setTimeout(run(), 4000);
-        funtion run() {
+        function run() {
             
         $('html, body').animate({
           scrollTop: ($(tagID).offset().top)
