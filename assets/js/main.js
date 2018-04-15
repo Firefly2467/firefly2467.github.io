@@ -13,7 +13,7 @@
         //fix direct nav 
         var url = window.location.href;
         console.log(url);
-        var start = '/#';
+        var start = url.indexOf('#');
         var tagID = url.slice(start, -1);
         console.log(tagID);
         
