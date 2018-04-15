@@ -15,9 +15,9 @@
         console.log(url);
         var start = url.indexOf('#');
         var tagID = url.slice(start);
-        console.log(tagID + ' 6');
+        console.log(tagID + ' 7');
             
-        $('html, body').animate({
+        $(window).animate({
           scrollTop: $(tagID).offset().top
         });
         
