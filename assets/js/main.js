@@ -15,10 +15,10 @@
         console.log(url);
         var start = url.indexOf('#');
         var tagID = url.slice(start);
-        console.log(tagID + ' 2');
-         $('html, body').stop().animate({
-                scrollTop: $(tagID).offset().top
-            }, 4000);
+        console.log(tagID + ' 3');
+        $('html, body').animate({
+          scrollTop: ($(tagID).offset().top)
+        }, 1000, "easeInOutExpo");
         
         /*
         $('.section-scroll').bind('click', function(e) {
