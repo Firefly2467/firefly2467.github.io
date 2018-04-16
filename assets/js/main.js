@@ -23,7 +23,7 @@
         /* ---------------------------------------------- /*
          * Scroll top
          /* ---------------------------------------------- */
-/*
+
         $(window).scroll(function() {
             if ($(this).scrollTop() > 100) {
                 $('.scroll-up').fadeIn();
@@ -31,7 +31,7 @@
                 $('.scroll-up').fadeOut();
             }
         });
-*/
+
         $('a[href="#totop"]').click(function() {
             $('html, body').animate({ scrollTop: 0 }, 'slow');
             return false;
@@ -63,12 +63,19 @@
             buildHomeSection(homeSection);
             hoverDropdown(width, mobileTest);
         });
-/*
+
         $(window).scroll(function() {
             effectsHomeSection(homeSection, this);
             navbarAnimation(navbar, homeSection, navHeight);
         });
-*/
+        
+        window.onload = function() {if(location.hash){
+			var elId = location.hash.replace('#','');
+			var scrollToEl = document.getElementById(elId);
+			scrollToEl.scrollIntoView(true);   
+			}
+		}
+
         /* ---------------------------------------------- /*
          * Set sections backgrounds
          /* ---------------------------------------------- */
