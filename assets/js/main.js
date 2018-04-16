@@ -70,6 +70,7 @@
         });
         hashScroll();
         function hashScroll() {
+            console.log('run1');
             if(location.hash){
             console.log('run');
 			var elId = location.hash.replace('#','');
