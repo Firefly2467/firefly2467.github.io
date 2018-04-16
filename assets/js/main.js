@@ -70,8 +70,8 @@
         });
         hashScroll();
         function hashScroll() {
-            console.log('run1');
-            if(location.hash){
+            console.log(window.location.hash);
+            if(window.location.hash){
             console.log('run');
 			var elId = location.hash.replace('#','');
 			var scrollToEl = document.getElementById(elId);
