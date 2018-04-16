@@ -68,14 +68,17 @@
             effectsHomeSection(homeSection, this);
             navbarAnimation(navbar, homeSection, navHeight);
         });
-        hashScroll();
-        function hashScroll() {
+        //FIXES URL NAV TO ANCHOR J.A
+        anchorScroll();
+        function anchorScroll() {
             console.log(window.location.hash);
             if(window.location.hash){
                 var tagID = window.location.hash;
-                $('html, body').stop().animate({
-                scrollTop: $(tagID).offset().top - 50
-                }, 1000);
+                if ( $(tagID).length ) {
+                    $('html, body').stop().animate({
+                    scrollTop: $(tagID).offset().top - 50
+                    }, 1000);
+                }
 			}
 		}
 
