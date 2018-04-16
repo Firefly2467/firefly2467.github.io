@@ -63,12 +63,12 @@
             buildHomeSection(homeSection);
             hoverDropdown(width, mobileTest);
         });
-
+/*
         $(window).scroll(function() {
             effectsHomeSection(homeSection, this);
             navbarAnimation(navbar, homeSection, navHeight);
         });
-
+*/
         /* ---------------------------------------------- /*
          * Set sections backgrounds
          /* ---------------------------------------------- */
