@@ -82,10 +82,6 @@
                 }
 			}
 		}
-        //LAZY LOADER J.A.
-        $(function() {
-            $('.lazy').lazy();
-        });
 
         /* ---------------------------------------------- /*
          * Set sections backgrounds
