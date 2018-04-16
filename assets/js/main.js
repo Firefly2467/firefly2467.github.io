@@ -70,6 +70,7 @@
         });
         
         window.onload = function() {if(location.hash){
+            console.log(run);
 			var elId = location.hash.replace('#','');
 			var scrollToEl = document.getElementById(elId);
 			scrollToEl.scrollIntoView(true);   
