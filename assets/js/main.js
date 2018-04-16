@@ -11,11 +11,6 @@
 
     $(document).ready(function() {
         
-        //LAZY LOADER J.A.
-        $(function() {
-            $('.lazy').lazy();
-        });
-        
         /* ---------------------------------------------- /*
          * WOW Animation When You Scroll
          /* ---------------------------------------------- */
@@ -87,6 +82,10 @@
                 }
 			}
 		}
+        //LAZY LOADER J.A.
+        $(function() {
+            $('.lazy').lazy();
+        });
 
         /* ---------------------------------------------- /*
          * Set sections backgrounds
