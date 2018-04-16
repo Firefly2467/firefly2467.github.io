@@ -72,10 +72,10 @@
         function hashScroll() {
             console.log(window.location.hash);
             if(window.location.hash){
-            console.log('run');
-			var elId = location.hash.replace('#','');
-			var scrollToEl = document.getElementById(elId);
-			scrollToEl.scrollIntoView(true);   
+                var tagID = window.location.hash;
+                $('html, body').stop().animate({
+                scrollTop: $(tagID).offset().top - 50
+                }, 1000);
 			}
 		}
 
