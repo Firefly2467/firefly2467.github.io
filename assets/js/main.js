@@ -7,6 +7,10 @@
     $(window).on('load', function() {
         $('.loader').fadeOut();
         $('.page-loader').delay(350).fadeOut('slow');
+        //LAZY LOADER J.A.
+        $(function() {
+            $('.lazy').lazy();
+        });
     });
 
     $(document).ready(function() {
