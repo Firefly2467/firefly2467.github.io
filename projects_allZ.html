@@ -55,8 +55,7 @@
     <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
     
     <!-- CDN SCRIPTS -->
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.7/jquery.lazy.min.js"></script>
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.7/jquery.lazy.plugins.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.7.1/lazyload.min.js"></script>
   </head>
   <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
@@ -2234,11 +2233,8 @@
     <script src="assets/js/main.js"></script>
     
     <script>
-        //LAZY LOADER J.A.
-        $(function() {
-            $('.lazy').Lazy();
-        });
-    </script>
+		new LazyLoad();
+	</script>
     
   </body>
 </html>
