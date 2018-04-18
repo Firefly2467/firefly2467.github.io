@@ -4,31 +4,11 @@
  * Preloader
  /* ---------------------------------------------- */
 (function(){
+    var timeoutState = false;
     $(window).on('load', function() {
         $('.loader').fadeOut();
         $('.page-loader').delay(350).fadeOut('slow');
-        //FIXES URL NAV TO ANCHOR J.A
-        anchorScroll();
-        function anchorScroll() {
-            console.log(window.location.hash);
-            if(window.location.hash){
-                var tagID = window.location.hash;
-                if ( $(tagID).length ) {
-                    $('html, body').stop().animate({
-                    scrollTop: $(tagID).offset().top - 50
-                    }, 1000);
-                }
-			}
-		}
-        console.log('Preloader Done.');
-    });
-
-    $(document).ready(function() {
-        console.log('Document Ready.');
-        setTimeout(timedOUT, 5000);
-        function timedOUT(){
-            $('.loader').fadeOut();
-            $('.page-loader').delay(350).fadeOut('slow');
+        if (timeoutState == false){
             //FIXES URL NAV TO ANCHOR J.A
             anchorScroll();
             function anchorScroll() {
@@ -42,7 +22,33 @@
                     }
                 }
             }
-            console.log('Timed Out.');
+            console.log('Preloader Done.');
+            timeoutState = true;
+        }
+    });
+
+    $(document).ready(function() {
+        console.log('Document Ready.');
+        setTimeout(timedOUT, 15000);
+        function timedOUT(){
+            if (timeoutState == false){
+                $('.loader').fadeOut();
+                $('.page-loader').delay(350).fadeOut('slow');
+                //FIXES URL NAV TO ANCHOR J.A
+                anchorScroll();
+                function anchorScroll() {
+                    console.log(window.location.hash);
+                    if(window.location.hash){
+                        var tagID = window.location.hash;
+                        if ( $(tagID).length ) {
+                            $('html, body').stop().animate({
+                            scrollTop: $(tagID).offset().top - 50
+                            }, 1000);
+                        }
+                    }
+                }
+                console.log('Timed Out.');
+            }
         }
         /* ---------------------------------------------- /*
          * WOW Animation When You Scroll
