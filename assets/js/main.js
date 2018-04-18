@@ -20,10 +20,11 @@
                 }
 			}
 		}
+        console.log('Preloader Done.');
     });
 
     $(document).ready(function() {
-        
+        console.log('Document Ready.');
         /* ---------------------------------------------- /*
          * WOW Animation When You Scroll
          /* ---------------------------------------------- */
