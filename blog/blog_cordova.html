@@ -110,7 +110,7 @@
                           “What device do you have?”
                           </p>
                           <p>
-                          “An old Android phone from 2012.”
+                          An old Android phone from 2012.
                           </p>
                           <p>
                           “So get the Android Studio and make a native app!”
@@ -118,8 +118,112 @@
                         </blockquote>
                     </p>
                     <p>
-                    
+                    Now that seems like the smart choice, however there is two points I need to add to explain why I didn’t make the smart decision. 
+                    First, I have no idea if it’s me or Gradle, the build tool Android Studio uses (It’s probably me…) https://stackoverflow.com/a/24828666  but I have 
+                    never had a good experience with it and the Android Studio. I never spent the time to figure out how to get it running without it spewing millions 
+                    of unreadable errors with no fix. For the simplest of things, I found myself battling error after error, some due to my client 
+                    (My linux installed on the usb, usually poor non-mac linux support for the studio) or due to file structure problems when trying to edit sample applications.
                     </p>
+                    <p>
+                    Either way, the less whinny reason is that even if the main target was myself, I knew others would also benefit from my core concept, and even if I got Android Studio working, 
+                    I would have the same setup problems with IOS and anything else.
+                    </p>
+                    <p>
+                    With that last thought, I set off to find something I had never known existed. The first thing that came to mind was “a multi-platform application”. 
+                    </p>
+                    <p>
+                    Right away, through my friends, I was introduced to React and React Native. Facebook’s answer to my curiosity on how to reach all the platforms. 
+                    However, I don’t jump without looking first (Forget about the wall thing OK?). I can write an entire blog on my short-lived adventure with React Native, 
+                    but to sum it up: On paper it looks good, in reality it doesn’t quite meet its goal, at least not yet. It’s still missing a lot of native interaction functions, 
+                    to deal with a devices camera for example, and lacked the tools necessary to quickly test the application (Expo, I hear you shout. Again, good on paper, useless when 
+                    it comes to actually testing) and even produce decent UI, or at the very least components to help keep with the IOS or Material design guidelines (Important for when 
+                    you actually want to get your application approved). I would like to point out that many people have had great success with React Native and the UI thing is a less of 
+                    a problem for people who have actually committed to a project. Even so, an important thing to note no matter who you are or what you want to do, it’s important to note 
+                    that apart from IOS and Android, the other platform options are limited and not well documented. This also applies to others such as Electron that don’t currently have a 
+                    clear path to the mobile sector.
+                    </p>
+                    <p>
+                    However, my situation is different. I’m a solo coder (not a great one at that), and I’m working on a niche application idea with no resources. 
+                    Not to mention that even if I have a slight idea what I am doing when it comes to UI’s, I am in no way interested in wasting time writing a UI from scratch 
+                    (Especially with Javascript) when the main goal is content aggregation. 
+                    </p>
+                    <p>
+                    And thus, my search became more refined: I needed something multi-platform, that offered device component support 
+                    (filesystem, camera, sensors) and offered some easy to start but also highly customizable UI, for the eventual moment when I want to move away from the default.
+                    </p>
+                    <p>
+                    That’s when I stumbled on “hybrid-apps” and more specifically, I met Cordova. I’m going to link to the Wikipedia page for Cordova and their main page if you want to 
+                    understand in detail it’s journey. The short and sweet version goes a little like this in my opinion: Cordova Apache is a wrapper for HTML5 WebApps that supports Android, 
+                    IOS, Windows mobile apps/ Win10 apps, Blackberry (OK?) and of course most modern browsers (Because you are technically making a WebApp).
+                    </p>
+                    <p>
+                    Cordova really caught my eye with this nice summary. Cordova offers many plugins that can expose different device components to the WebApp. Search around a 
+                    little and you can find HTML/CSS/JS Frameworks that can give you that default Material and IOS design but can also be highly customized.
+                    </p>
+                    <p>
+                    Yet, it’s not all sunshine. I would like to bring up a very key point when it comes to making anything: There will ALWAYS be problems. 
+                    </p>
+                    <p>
+                    For Cordova over the past couple of weeks it comes down to some big issues, but at least for me they were manageable, and that is why I feel it’s important to 
+                    clarify that I in no way am trying to convince anyone of anything regarding what they should or shouldn’t use for their own projects. All I am trying to do is 
+                    document the steps I took to find what best suited me and my own goal, and hopefully help people that are starting off what to watch out for when they begin their own journey.
+                    </p>
+                    <p>
+                    After finding Cordova and jumping in I found myself really happy with the CLI provided. You can use graphical interfaces by other companies, but the Cordova 
+                    CLI is easy to use and completely free. Adding different platform support is only a command away, and after manually installing the separate dev tools such as the 
+                    Android Studio for example, everything lines up nice for a simple one liner to compile for Android, IOS, Win10 APP or the others. You can also add the “browser” 
+                    platform that lets you open the application in the browser of your choice, which is extremely fast and with Chrome or Firefox Dev Console it is super easy to debug 
+                    code event before compiling for a platform. I will cover the framework I am using for the UI in another post. Long story short, the first couple of weeks was  
+                    great for the applications progress. 
+                    </p>
+                    <p>
+                    Browserifying some node packages gave me great control over the core of my application and the official plugins provided by the Cordova project made sure I had access 
+                    to store files on the device, take pictures, control the Splashscreen, the Statusbar and the Battery Status.
+                    </p>
+                    <p>
+                    Sadly, the problems I faced came directly from what made Cordova so appealing. HTML 5 is supposed to be a living standard, which for me only equates into things working well 
+                    in Firefox, breaking in Chrome or wanting to isolate CSS and finding out that Firefox still lacks ShadowDOM and other features that work great in Chrome. Don’t even get 
+                    me started for Edge / Internet Explorer! And browsers differences aren’t the end…
+                    </p>
+                    <p>
+                    Cordova opts to use the built-in web viewers in Android and IOS. On the IOS side it’s not as bad (from what I have seen) but for Android it’s a mess. The quick rundown is 
+                    that up to 4.0 Ice-cream Sandwich, all previous versions shipped with a different versions of WebView, in till it finally switched to a Chrome/Blink based Viewer that 
+                    “theoretically” gets updated across all Android versions after 4.0 . The even quicker rundown on CrossWalk if you have heard of it is that it was terminated in 2017.
+                    </p>
+                    <p>
+                    What I would have liked to see is a unified browser that shipped inside of the APK or IPA so that no matter what platform you are on you know the experience will be 
+                    the same, this is harder on the Cordova Team but would make developing for multiple platforms easier. 
+                    </p>
+                    <p>
+                    The second issue is with the plugins. They are limited. With so many devices to support, building plugins that expose native functions becomes extremely difficult. 
+                    And when I say devices, I mean devices not platform. Individual bugs with a certain type of phone is a high occurrence. The silver lining is that many community plugins 
+                    exist for some of these quirks, but this is the real point where your mileage may vary. It worked out for me, but it won’t for all. The best example is the entire maze 
+                    you need to pass to get your app to snap a picture on Android. Android might kill your application to save on resources while your application is in the background when 
+                    taking the picture from the camera application. And even if that is not a problem, your application still needs to listen for when it comes back into view to receive the 
+                    image that was taking. Don’t get me wrong, it’s not impossible but a lot of wasted time for something that should be fairly straight forward.
+                    </p>
+                    <blockquote>
+                      <p>
+                      The fact is your access to the devices resources are much more limited than if you were building a native app.      
+                      </p>
+                    </blockquote>
+                    <p>
+                    The inconsistencies on the different platforms, the difficulty of utilizing a devices resources are not things that can be easily described, but for me at least 
+                    the frustration was real, and still is. However, the real point I want to make with this short story is that nothing will go your way when you want it. For all the 
+                    strengths I found in my “perfect” solution, they were also my biggest enemies, and more than that they made me doubt the direction I was going. More than anything else 
+                    I regret wasting time getting discouraged and out right abandoning Cordova to go see if React Native would be easier. No joke, I started a React Native project folder 4 
+                    times in a span of roughly a month every time I hit a wall in Cordova. And guess what, it wasn’t going to be easier. React Native has it’s own problems. Some of them are 
+                    even shared with Cordova.
+                    </p>
+                    <p>
+                    That said, I write these things primarily for myself and anyone else reading this can interpret it however they would like. But my message to myself for when I start another project is this:<br>
+                    Know what you want. Know what you need. Know the weakness of your strength. Pick your poison and stick with it till the very end. Oh, and don’t go jumping into imaginary walls anymore. 
+                    And stay clear of jumping into actual walls if that isn’t clear for you in the future.
+<!--
+                    <p>
+                    
+                    </p> -->
+                    
                   <!--
                     <p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words.</p>
                     <p>Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words.</p>
