@@ -99,7 +99,7 @@
                       </p>
                     </blockquote>
                     <p>
-                    <big>WELL</big> let me set the stage for my next set of adventures. Let’s say I metaphorically ran myself into a wall. Well apart from the normal consequences that come with one jumping into a nice sturdy brick wall, I was left with a good amount of “free” time.  
+                    <B><big>WELL</big></B> let me set the stage for my next set of adventures. Let’s say I metaphorically ran myself into a wall. Well apart from the normal consequences that come with one jumping into a nice sturdy brick wall, I was left with a good amount of “free” time.  
                     I of course had some other things I had to take care of, but overall my life after jumping into the imaginary wall was calmer then what my life had been like before.  Nonetheless, this isn’t about walls. Or maybe it is.
                     </p>
                     <p>
@@ -109,7 +109,7 @@
                           <p>
                           “What device do you have?”
                           </p>
-                          <p>
+                          <p ALIGN=Center>
                           An old Android phone from 2012.
                           </p>
                           <p>
@@ -119,17 +119,17 @@
                     </p>
                     <p>
                     Now that seems like the smart choice, however there is two points I need to add to explain why I didn’t make the smart decision. 
-                    First, I have no idea if it’s me or Gradle, the build tool Android Studio uses (It’s probably me…) https://stackoverflow.com/a/24828666  but I have 
+                    First, I have no idea if it’s me or Gradle, the build tool Android Studio <a href="https://stackoverflow.com/a/24828666">uses</a> (It’s probably me…) but I have 
                     never had a good experience with it and the Android Studio. I never spent the time to figure out how to get it running without it spewing millions 
                     of unreadable errors with no fix. For the simplest of things, I found myself battling error after error, some due to my client 
                     (My linux installed on the usb, usually poor non-mac linux support for the studio) or due to file structure problems when trying to edit sample applications.
                     </p>
                     <p>
                     Either way, the less whinny reason is that even if the main target was myself, I knew others would also benefit from my core concept, and even if I got Android Studio working, 
-                    I would have the same setup problems with IOS and anything else.
+                    I would have the same setup problems with IOS and anything else down the road. The learning curve.
                     </p>
                     <p>
-                    With that last thought, I set off to find something I had never known existed. The first thing that came to mind was “a multi-platform application”. 
+                    With that last thought, I set off to find the unknown, “a multi-platform application”. 
                     </p>
                     <p>
                     Right away, through my friends, I was introduced to React and React Native. Facebook’s answer to my curiosity on how to reach all the platforms. 
@@ -138,7 +138,7 @@
                     to deal with a devices camera for example, and lacked the tools necessary to quickly test the application (Expo, I hear you shout. Again, good on paper, useless when 
                     it comes to actually testing) and even produce decent UI, or at the very least components to help keep with the IOS or Material design guidelines (Important for when 
                     you actually want to get your application approved). I would like to point out that many people have had great success with React Native and the UI thing is a less of 
-                    a problem for people who have actually committed to a project. Even so, an important thing to note no matter who you are or what you want to do, it’s important to note 
+                    a problem for people who have actually committed to a project. Even so, an important thing to note no matter who you are or what you want to do,
                     that apart from IOS and Android, the other platform options are limited and not well documented. This also applies to others such as Electron that don’t currently have a 
                     clear path to the mobile sector.
                     </p>
@@ -153,12 +153,12 @@
                     </p>
                     <p>
                     That’s when I stumbled on “hybrid-apps” and more specifically, I met Cordova. I’m going to link to the Wikipedia page for Cordova and their main page if you want to 
-                    understand in detail it’s journey. The short and sweet version goes a little like this in my opinion: Cordova Apache is a wrapper for HTML5 WebApps that supports Android, 
+                    understand in detail it’s <a href="https://en.wikipedia.org/wiki/Apache_Cordova">journey</a>. The short and sweet version goes a little like this in my opinion: <a href="https://cordova.apache.org/">Cordova Apache</a> is a wrapper for HTML5 WebApps that supports Android, 
                     IOS, Windows mobile apps/ Win10 apps, Blackberry (OK?) and of course most modern browsers (Because you are technically making a WebApp).
                     </p>
                     <p>
-                    Cordova really caught my eye with this nice summary. Cordova offers many plugins that can expose different device components to the WebApp. Search around a 
-                    little and you can find HTML/CSS/JS Frameworks that can give you that default Material and IOS design but can also be highly customized.
+                    Cordova really caught my eye with these key features: Cordova offers many plugins that can expose different device components to the WebApp. Search around a 
+                    little and you can find HTML/CSS/JS Frameworks that can give you that default Material and IOS design but that can also be highly customized.
                     </p>
                     <p>
                     Yet, it’s not all sunshine. I would like to bring up a very key point when it comes to making anything: There will ALWAYS be problems. 
@@ -173,7 +173,7 @@
                     CLI is easy to use and completely free. Adding different platform support is only a command away, and after manually installing the separate dev tools such as the 
                     Android Studio for example, everything lines up nice for a simple one liner to compile for Android, IOS, Win10 APP or the others. You can also add the “browser” 
                     platform that lets you open the application in the browser of your choice, which is extremely fast and with Chrome or Firefox Dev Console it is super easy to debug 
-                    code event before compiling for a platform. I will cover the framework I am using for the UI in another post. Long story short, the first couple of weeks was  
+                    code even before compiling for a platform. I will cover the framework I am using for the UI in another post. Long story short, the first couple of weeks was  
                     great for the applications progress. 
                     </p>
                     <p>
@@ -183,7 +183,7 @@
                     <p>
                     Sadly, the problems I faced came directly from what made Cordova so appealing. HTML 5 is supposed to be a living standard, which for me only equates into things working well 
                     in Firefox, breaking in Chrome or wanting to isolate CSS and finding out that Firefox still lacks ShadowDOM and other features that work great in Chrome. Don’t even get 
-                    me started for Edge / Internet Explorer! And browsers differences aren’t the end…
+                    me started fon Edge / Internet Explorer! And browsers differences aren’t the end…
                     </p>
                     <p>
                     Cordova opts to use the built-in web viewers in Android and IOS. On the IOS side it’s not as bad (from what I have seen) but for Android it’s a mess. The quick rundown is 
@@ -200,7 +200,7 @@
                     exist for some of these quirks, but this is the real point where your mileage may vary. It worked out for me, but it won’t for all. The best example is the entire maze 
                     you need to pass to get your app to snap a picture on Android. Android might kill your application to save on resources while your application is in the background when 
                     taking the picture from the camera application. And even if that is not a problem, your application still needs to listen for when it comes back into view to receive the 
-                    image that was taking. Don’t get me wrong, it’s not impossible but a lot of wasted time for something that should be fairly straight forward.
+                    image that it was taking. Don’t get me wrong, it’s not impossible but a lot of wasted time for something that should be fairly straight forward.
                     </p>
                     <blockquote>
                       <p>
@@ -208,7 +208,7 @@
                       </p>
                     </blockquote>
                     <p>
-                    The inconsistencies on the different platforms, the difficulty of utilizing a devices resources are not things that can be easily described, but for me at least 
+                    The inconsistencies on the different platforms, the difficulty of utilizing device resources are not things that can be easily described, but for me at least 
                     the frustration was real, and still is. However, the real point I want to make with this short story is that nothing will go your way when you want it. For all the 
                     strengths I found in my “perfect” solution, they were also my biggest enemies, and more than that they made me doubt the direction I was going. More than anything else 
                     I regret wasting time getting discouraged and out right abandoning Cordova to go see if React Native would be easier. No joke, I started a React Native project folder 4 
